@@ -183,8 +183,13 @@
             };
             await addDoc(collection(db, "codeFlow"), doc);
             alert('응원 남기기 성공!');
-
             window.location.reload();
+        })
+
+        $("#cheerBtn").click(async function () {
+            $("#cheerbox").toggle();
+        })
+
 
             let docs = await getDocs(collection(db, "codeFlow"));
             docs.forEach((doc) => {
@@ -193,7 +198,7 @@
 
 
             });
-        })
+        
 
     </script>
 </head>
